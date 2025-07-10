@@ -5,12 +5,6 @@ import { IconContext } from "react-icons"
 import { FiBook, FiUser, FiMail, FiMusic } from "react-icons/fi"
 import { useLocation } from "@reach/router"
 
-const activeStyles = {
-  textDecoration: `underline`,
-  color: "#1A1A1A",
-  textAlign: "center",
-}
-
 const HeaderNav = () => {
   const location = useLocation()
   const isHome = location.pathname === "/"
@@ -18,6 +12,11 @@ const HeaderNav = () => {
   const navClass = isHome
     ? `${styles.headerNav} ${styles.navWhite}`
     : styles.headerNav
+  const activeStyles = {
+    textDecoration: `underline`,
+    color: isHome ? "#fff" : "#083f45",
+    textAlign: "center",
+  }
 
   return (
     <div className={navClass}>
