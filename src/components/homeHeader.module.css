@@ -39,9 +39,8 @@
   left: 0;
   right: 0;
   height: 80px;
-  background: linear-gradient(to bottom, #fff 0%, rgba(255, 255, 255, 0.0) 100%);
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.0) 100%);
   z-index: 2;
-  border-radius: 0.5rem 0.5rem 0 0;
   pointer-events: none;
 }
 
@@ -53,6 +52,7 @@
   padding: 2rem 1rem;
   background: rgba(0, 0, 0, 0.15);
   border-radius: 0.5rem;
+  margin-top: 1rem;
 }
 
 /* Remove .bannerImage styles since it's no longer used */
@@ -62,8 +62,8 @@
 
 @media screen and (max-width: 600px) {
   .homeBanner {
-    margin: -4rem auto 0 auto;
-    padding: 4rem 1rem 0 1rem;
+    margin: -13.2rem auto 0 auto;
+    padding: 13.2rem 1rem 0 1rem;
     min-height: 300px;
   }
 
