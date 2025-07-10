@@ -3,9 +3,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  margin: -8rem auto 0 auto;
+  /* Pull background up */
+  /* Pull up behind header */
   max-width: 1000px;
-  padding: 2rem 2rem 0;
+  padding: 8rem 2rem 0 2rem;
+  /* Add top padding to keep content in place */
+  /* Remove top padding */
   position: relative;
   background-image: url('../images/panel-discussion-hero.png');
   background-size: cover;
@@ -24,16 +28,30 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.45);
   z-index: 1;
+  border-radius: 0.5rem;
+}
+
+/* Gradient fade at the top */
+.homeBanner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, #fff 0%, rgba(255, 255, 255, 0.0) 100%);
+  z-index: 2;
+  border-radius: 0.5rem 0.5rem 0 0;
+  pointer-events: none;
 }
 
 .bannerDetails {
   max-width: 476px;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   color: #fff;
   padding: 2rem 1rem;
   background: rgba(0, 0, 0, 0.15);
-  /* subtle background for extra contrast */
   border-radius: 0.5rem;
 }
 
@@ -44,14 +62,18 @@
 
 @media screen and (max-width: 600px) {
   .homeBanner {
-    padding: 1rem;
-    margin: .5rem auto;
+    margin: -4rem auto 0 auto;
+    padding: 4rem 1rem 0 1rem;
     min-height: 300px;
   }
 
   .bannerDetails {
     margin-bottom: 1.45rem;
     padding: 1rem 0.5rem;
+  }
+
+  .homeBanner::after {
+    height: 50px;
   }
 }
 
