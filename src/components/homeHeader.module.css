@@ -1,46 +1,70 @@
 .homeBanner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1000px;
-    padding: 2rem 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 2rem 2rem 0;
+  position: relative;
+  background-image: url('../images/panel-discussion-hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 400px;
+}
+
+/* Overlay for readability */
+.homeBanner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
 }
 
 .bannerDetails {
-    max-width: 476px;
+  max-width: 476px;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 2rem 1rem;
+  background: rgba(0, 0, 0, 0.15);
+  /* subtle background for extra contrast */
+  border-radius: 0.5rem;
 }
 
+/* Remove .bannerImage styles since it's no longer used */
 .bannerImage {
-    display: flex;
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
-    .homeBanner {
-        padding: 1rem;
-        margin: .5rem auto;
-    }
+  .homeBanner {
+    padding: 1rem;
+    margin: .5rem auto;
+    min-height: 300px;
+  }
 
-    .bannerImage {
-        margin: auto;
-    }
-
-    .bannerDetails {
-        margin-bottom: 1.45rem;
-    }
+  .bannerDetails {
+    margin-bottom: 1.45rem;
+    padding: 1rem 0.5rem;
+  }
 }
 
 .title {
-    margin-bottom: 1.45rem;
-
-    text-decoration: none;
-    font-family: "Krona One";
-    font-weight: bold;
-    text-rendering: optimizeLegibility;
-    font-size: 2.25rem;
-    line-height: 1.1;
+  margin-bottom: 1.45rem;
+  text-decoration: none;
+  font-family: "Krona One";
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 2.25rem;
+  line-height: 1.1;
 }
 
 .tagline {
-    line-height: 1.1;
+  line-height: 1.1;
 }

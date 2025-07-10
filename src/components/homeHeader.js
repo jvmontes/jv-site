@@ -37,20 +37,7 @@ const homeHeader = () => {
 
         <SocialLinks></SocialLinks>
       </div>
-
-      <div className={styles.bannerImage}>
-        <StaticImage
-          src="../images/jorge-looking-away.jpg"
-          alt="Headshot of Jorge"
-          placeholder="blurred"
-          layout="fixed"
-          width={340}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          style={{
-            margin: `auto auto 1.45rem`,
-          }}
-        />
-      </div>
+      {/* Removed the bannerImage div and its contents. The background image will be set via CSS. */}
     </div>
   )
 }
