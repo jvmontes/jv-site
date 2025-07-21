@@ -3,7 +3,7 @@ import React from "react"
 import * as styles from "./socialLinks.module.css"
 import { IconContext } from "react-icons"
 
-import { RiTwitterLine, RiLinkedinBoxLine, RiGithubLine } from "react-icons/ri"
+import { RiLinkedinBoxLine, RiGithubLine } from "react-icons/ri"
 
 const SocialLinks = () => {
   return (
@@ -18,18 +18,6 @@ const SocialLinks = () => {
           <IconContext.Provider value={{ color: "#2867B2", size: "2rem" }}>
             <span style={{ paddingTop: `.5rem` }}>
               <RiLinkedinBoxLine></RiLinkedinBoxLine>
-            </span>
-          </IconContext.Provider>
-        </a>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://twitter.com/jvmontes"
-          className={styles.linkContainer}
-        >
-          <IconContext.Provider value={{ color: "#1DA1F2", size: "2rem" }}>
-            <span style={{ paddingTop: `.5rem` }}>
-              <RiTwitterLine></RiTwitterLine>
             </span>
           </IconContext.Provider>
         </a>
