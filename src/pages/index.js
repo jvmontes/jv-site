@@ -7,7 +7,6 @@ import IconCollection from "../components/iconCollection"
 import HomeHeader from "../components/homeHeader"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import WebsiteFeature from "../components/websiteFeature"
 
 import { useStaticQuery } from "gatsby";
 import { graphql } from "gatsby";
@@ -31,43 +30,6 @@ const soundCloudComponentStyle = {
 
 const IndexPage = () => {
 
-  const imageInfo = useStaticQuery(graphql`
-    query ImageQuery {
-      deviceFix: file(relativePath: {eq: "device-fix-inc-website.png"}) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 300
-            placeholder: BLURRED
-            formats: [AUTO, WEBP, AVIF]
-            layout: FIXED
-            quality: 100
-          )
-        }
-      }
-      restorying: file(relativePath: {eq: "restorying-website.png"}) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 230
-            placeholder: BLURRED
-            formats: [AUTO, WEBP, AVIF]
-            layout: FIXED
-            quality: 100
-          )
-        }
-      }
-      restoryingMobile: file(relativePath: {eq: "restorying-website.png"}) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 300
-            placeholder: BLURRED
-            formats: [AUTO, WEBP, AVIF]
-            layout: FIXED
-            quality: 100
-          )
-        }
-      }
-    }
-`)
 
   return (
 
@@ -76,33 +38,6 @@ const IndexPage = () => {
 
       <HomeHeader></HomeHeader>
 
-      <div className="bioContainer">
-        <div className="copyContent">
-
-          <h1 style={{ textAlign: `center` }}>Websites</h1>
-
-          <p>In 2021, I resigned from my career in corporate consulting and wanted to help local business owners build their own website. This allowed me to gain some additional experience building front-end experiences while also providing a valuable service to others.
-            Gatsby is an intuitive tool that leverages the JAMstack to quickly build safe, scalable websites in a modern way using React and GraphQL. Check out some of the websites I've built for some pretty cool organizations.
-          </p>
-
-          <div className="websitesWrapper">
-            <WebsiteFeature name="Device Fix Inc." 
-            gatsbyImageData={imageInfo.deviceFix.childImageSharp.gatsbyImageData} 
-            mobileGatsbyImageData={imageInfo.deviceFix.childImageSharp.gatsbyImageData} 
-            imageAlt="Image of the Device Fix Inc. Homepage"
-            slug="https://www.devicefixinc.com" 
-            description="Device Fix Inc. is located on 18th street in the Pilsen neighborhood of Chicago. They had a Facebook and Instagram page, but did not yet have a website landing page. Together, we brought their brand, story, and vision to life on a custom website." ></WebsiteFeature>
-            
-            <WebsiteFeature name="Restorying Co-op" 
-            gatsbyImageData={imageInfo.restorying.childImageSharp.gatsbyImageData} 
-            mobileGatsbyImageData={imageInfo.restoryingMobile.childImageSharp.gatsbyImageData}
-            imageAlt="Image of the Restorying Co-op Homepage"
-            slug="https://www.restoryingcoop.com" 
-            description="Restorying Co-op was an organization that embraced the change from the pandemic. They had a placeholder site on SquareSpace and needed someone to build it out to accurately portray their organization and the work they do. In under two months, we created a website that was ready to accept inquiries on their services." ></WebsiteFeature>
-          </div>
-
-        </div>
-      </div>
 
       <div className="bioContainer">
         <div className="copyContent">

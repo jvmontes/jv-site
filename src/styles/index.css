@@ -8,19 +8,10 @@
     padding: 2rem 2rem;
 }
 
-.websitesWrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-}
 
 @media screen and (max-width: 600px) {
     .copyContent {
         padding: 1rem;
-    }
-
-    .websitesWrapper {
-        grid-template-columns: repeat(1, 1fr);
     }
 }
 
