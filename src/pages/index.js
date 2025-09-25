@@ -7,8 +7,7 @@ import IconCollection from "../components/iconCollection"
 import HomeHeader from "../components/homeHeader"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { FaCode, FaPaintBrush, FaTools, FaExternalLinkAlt } from "react-icons/fa"
-import { SiSquarespace, SiWordpress, SiShopify, SiJavascript, SiHtml5, SiCss3 } from "react-icons/si"
+import BuilderSection from "../components/builderSection"
 
 import { useStaticQuery } from "gatsby";
 import { graphql } from "gatsby";
@@ -40,70 +39,7 @@ const IndexPage = () => {
 
       <HomeHeader></HomeHeader>
 
-      <section className="builderSection">
-        <div className="builderContainer">
-          <h1 className="builderTitle">Builder</h1>
-
-          <div className="servicesGrid">
-            <div className="serviceItem">
-              <FaCode className="serviceIcon" />
-              <h3>Website Development</h3>
-            </div>
-
-            <div className="serviceItem">
-              <FaPaintBrush className="serviceIcon" />
-              <h3>Website Design</h3>
-            </div>
-
-            <div className="serviceItem">
-              <FaTools className="serviceIcon" />
-              <h3>Technical Consulting</h3>
-            </div>
-          </div>
-
-          <div className="toolsSection">
-            <h2 className="toolsTitle">Tools</h2>
-            <div className="toolsGrid">
-              <div className="toolItem">
-                <SiSquarespace className="toolIcon" />
-                <span>Squarespace</span>
-              </div>
-
-              <div className="toolItem">
-                <SiWordpress className="toolIcon" />
-                <span>WordPress</span>
-              </div>
-
-              <div className="toolItem">
-                <SiHtml5 className="toolIcon" />
-                <span>HTML</span>
-              </div>
-
-              <div className="toolItem">
-                <SiCss3 className="toolIcon" />
-                <span>CSS</span>
-              </div>
-
-              <div className="toolItem">
-                <SiJavascript className="toolIcon" />
-                <span>JavaScript</span>
-              </div>
-
-              <div className="toolItem">
-                <SiShopify className="toolIcon" />
-                <span>Shopify</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="caseStudiesSection">
-            <a href="/case-studies" className="caseStudiesLink">
-              View Case Studies
-              <FaExternalLinkAlt className="linkIcon" />
-            </a>
-          </div>
-        </div>
-      </section>
+      <BuilderSection />
 
       <div className="bioContainer">
         <div className="copyContent">
