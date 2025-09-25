@@ -14,9 +14,9 @@ const homeHeader = () => {
           <h4 className={styles.tagline}>Engineer, Educator, and Speaker</h4>
 
           <div>
-            <p>Helping people make sense of tech, business, and AI.</p>
+            <p className={styles.subtext}>Helping people make sense of tech, business, and AI.</p>
 
-            <p>
+            <p className={styles.subtext}>
               Creative expression and storytelling through music and writing.
             </p>
 

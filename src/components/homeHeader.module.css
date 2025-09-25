@@ -48,9 +48,9 @@
   z-index: 3;
   color: #fff;
   padding: 2rem 1rem;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 /* Remove .bannerImage styles since it's no longer used */
@@ -78,7 +78,7 @@
 }
 
 .title {
-  margin-bottom: 1.45rem;
+  margin-bottom: 0.5rem;
   text-decoration: none;
   font-family: "Krona One";
   font-weight: bold;
@@ -89,4 +89,9 @@
 
 .tagline {
   line-height: 1.1;
+  font-weight: bold;
+}
+
+.subtext {
+  font-weight: bold;
 }
