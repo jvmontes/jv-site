@@ -38,10 +38,10 @@ const IndexPage = () => {
       <Seo title="Home" />
 
       <HomeHeader></HomeHeader>
+{/* 
+      <BuilderSection /> */}
 
-      <BuilderSection />
-
-      <div className="bioContainer">
+      <div className="musicBioContainer">
         <div className="copyContent">
 
           <h1 style={{ textAlign: `center` }}>Music</h1>
