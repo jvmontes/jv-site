@@ -8,19 +8,36 @@
     padding: 2rem 2rem;
 }
 
-.websitesWrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+/* Music Bio Container with fade effect */
+.musicBioContainer {
+    position: relative;
+    background-color: var(--color-background);
+    padding-top: 6rem;
 }
+
+/* Gradient fade at the top of music section */
+.musicBioContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.0) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Ensure content appears above the fade */
+.musicBioContainer .copyContent {
+    position: relative;
+    z-index: 2;
+}
+
 
 @media screen and (max-width: 600px) {
     .copyContent {
         padding: 1rem;
-    }
-
-    .websitesWrapper {
-        grid-template-columns: repeat(1, 1fr);
     }
 }
 
