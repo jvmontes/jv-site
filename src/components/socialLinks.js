@@ -12,7 +12,7 @@ const SocialLinks = () => {
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://www.linkedin.com/in/jorgealbertoviramontes/"
+          href="https://www.linkedin.com/in/jorge-viramontes/"
           className={styles.linkContainer}
         >
           <IconContext.Provider value={{ color: "#2867B2", size: "2rem" }}>
